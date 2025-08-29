@@ -4,322 +4,350 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- daisy ui -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- fontawoseme -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Emergency-Hotline</title>
   </head>
   <body>
     <!-- navbar section  -->
-    <nav class="flex justify-between p-4 ">
+    <nav class="flex justify-between p-4">
       <div class="flex justify-center items-center">
         <img class="h-10 m-2" src="./assets/logo.png" alt="logo" />
-        <span class="text-green-900">Emergency <br> Service</span>
+        <span class="text-green-900"
+          >Emergency <br />
+          Service</span
+        >
       </div>
 
       <div class="flex gap-5">
-        <div class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl">
+        <div
+          class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl"
+        >
           <span id="heartdisplay">0</span>
           <img class="h-5 w-5 m-2" src="./assets/heart.png" alt="heart" />
         </div>
-        <div class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl">
-          <span id = "displaycoin">100</span>
+        <div
+          class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl"
+        >
+          <span id="displaycoin">100</span>
           <img class="h-5 w-5 m-2" src="./assets/coin.png" alt="coin" />
         </div>
-        <div class="flex items-center btn btn-active bg-green-900 rounded-3xl text-white">
-            <button>2 Copy</button>
+        <div
+          class="flex items-center btn btn-active bg-green-900 rounded-3xl text-white"
+        >
+          <button id="copy-btn">2 Copy</button>
         </div>
       </div>
     </nav>
 
-
-
     <!-- banner section  -->
 
-    <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-4 text-center  ">
-        <img class="w-30 m-auto" src="./assets/logo-dark.png" alt="">
-        <h1 class="text-white font-bold py-3">জরুরি সেবা ডিরেক্টরি</h1>
-        <p class="text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+    <section
+      class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] p-4 text-center"
+    >
+      <img class="w-30 m-auto" src="./assets/logo-dark.png" alt="" />
+      <h1 class="text-white font-bold py-3">জরুরি সেবা ডিরেক্টরি</h1>
+      <p class="text-white">
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
+      </p>
     </section>
 
-
-
-
     <!-- cards section  -->
-     <div 
-     id="card-container"
-     class="cards-container grid grid-cols-12 gap-3 p-4 bg-green-100  ">
-              <!-- all cards -->
-               <div class="grid grid-cols-3 col-span-9 gap-5 ">
-                        <!-- card -->
+    <div
+      id="card-container"
+      class="cards-container grid grid-cols-12 gap-3 p-4 bg-green-100"
+    >
+      <!-- all cards -->
+      <div class="grid grid-cols-3 col-span-9 gap-5">
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/emergency.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/emergency.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">জাতীয় জরুরি সেবা</h1>
+            <p>National Emergency</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">জাতীয় জরুরি সেবা</h1>
-                <p>National Emergency</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">999</p>
+            <button class="btn btn-active rounded-3xl">সার্বজনীন</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">999</p>
-                <button class="btn btn-active rounded-3xl">সার্বজনীন</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                                <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/police.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-               <img class="w-10" src="./assets/police.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">পুলিশ</h1>
+            <p>Police</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">পুলিশ</h1>
-                <p>Police</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">999</p>
+            <button class="btn btn-active rounded-3xl">পুলিশ</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">999</p>
-                <button class="btn btn-active rounded-3xl">পুলিশ</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/fire-service.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/fire-service.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">ফায়ার সার্ভিস</h1>
+            <p>Fire Service</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">ফায়ার সার্ভিস</h1>
-                <p>Fire Service</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">999</p>
+            <button class="btn btn-active rounded-3xl">ফায়ার</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">999</p>
-                <button class="btn btn-active rounded-3xl">ফায়ার</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/ambulance.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/ambulance.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">অ্যাম্বুলেন্স</h1>
+            <p>Ambulance</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">অ্যাম্বুলেন্স</h1>
-                <p>Ambulance</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">1994-999999</p>
+            <button class="btn btn-active rounded-3xl">স্বাস্থ্য</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">1994-999999</p>
-                <button class="btn btn-active rounded-3xl">স্বাস্থ্য</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/emergency.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/emergency.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">নারী ও শিশু সহায়তা</h1>
+            <p>Women & Child Helpline</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">নারী ও শিশু সহায়তা</h1>
-                <p>Women & Child Helpline</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">109</p>
+            <button class="btn btn-active rounded-3xl">সহায়তা</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">109</p>
-                <button class="btn btn-active rounded-3xl">সহায়তা</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/emergency.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/emergency.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">দুদক</h1>
+            <p>Anti-Corruption</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">দুদক</h1>
-                <p>Anti-Corruption</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">106</p>
+            <button class="btn btn-active rounded-3xl">সরকারি</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">106</p>
-                <button class="btn btn-active rounded-3xl">সরকারি</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/emergency.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/emergency.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">বিদ্যুৎ বিভ্রাট</h1>
+            <p>Electricity Outage</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">বিদ্যুৎ বিভ্রাট</h1>
-                <p>Electricity Outage</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">16216</p>
+            <button class="btn btn-active rounded-3xl">বিদ্যুৎ</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">16216</p>
-                <button class="btn btn-active rounded-3xl">বিদ্যুৎ</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
 
-                        <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/brac.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/brac.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">ব্র্যাক</h1>
+            <p>Brac</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">ব্র্যাক</h1>
-                <p>Brac</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">16445</p>
+            <button class="btn btn-active rounded-3xl">এনজিও</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">16445</p>
-                <button class="btn btn-active rounded-3xl">এনজিও</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
-                                <!-- card -->
+        <!-- card -->
 
-                <div class="card p-2  shadow-lg  bg-white">
+        <div class="card p-2 shadow-lg bg-white">
+          <div class="flex items-center justify-between py-2">
+            <img class="w-10" src="./assets/Bangladesh-Railway.png" alt="" />
+            <i class="fa-regular fa-heart"></i>
+          </div>
 
-            <div class="flex items-center justify-between py-2"> 
-                <img class="w-10" src="./assets/Bangladesh-Railway.png" alt="">
-                <i class="fa-regular fa-heart"></i>
-            </div>
+          <div class="py-2">
+            <h1 class="font-bold text-xl">বাংলাদেশ রেলওয়ে</h1>
+            <p>Bangladesh Railway</p>
+          </div>
 
-            <div class="py-2"> 
-                <h1 class="font-bold text-xl  ">বাংলাদেশ রেলওয়ে</h1>
-                <p>Bangladesh Railway</p>
-            </div>
+          <div class="py-2">
+            <p class="font-bold text-2xl">163</p>
+            <button class="btn btn-active rounded-3xl">পরিবহন</button>
+          </div>
 
-            <div class="py-2">
-                <p class="font-bold text-2xl">163</p>
-                <button class="btn btn-active rounded-3xl">পরিবহন</button>
-            </div>
-
-            <div class="flex py-2">
-                <button class="btn flex-1"> <span><i class="fa-regular fa-copy"></i></span> Copy</button>
-                <button class="btn btn-active bg-green-600 text-white flex-1"> <span><i class="fa-solid fa-phone"></i></span> Call</button>
-
-            </div>
-
+          <div class="flex py-2">
+            <button class="btn flex-1">
+              <span><i class="fa-regular fa-copy"></i></span> Copy
+            </button>
+            <button class="btn btn-active bg-green-600 text-white flex-1">
+              <span><i class="fa-solid fa-phone"></i></span> Call
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!-- side bar -->
+      <div class="col-span-3">
+        <div class="bg-white rounded-xl p-4 h-full">
+          <div class="flex justify-between items-center">
+            <p><i class="fa-solid fa-clock"></i>Call History</p>
+            <button id="clearbtn" class="btn btn-active bg-green-900 rounded-3xl text-white">
+              Clear
+            </button>
+          </div>
+
+          <!-- call history card container-->
+
+          <div id="historyContainer">
 
 
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-               </div>
-
-
-
-               <!-- side bar -->
-                <div class="col-span-3">
-                  <div class="bg-white rounded-xl p-4 h-full">
-                      <div class="flex justify-between items-center">
-
-                      <p><i class="fa-solid fa-clock"></i>Call History</p>
-                      <button class=" btn btn-active bg-green-900 rounded-3xl text-white">Clear</button>
-
-                  </div>
-
-                  </div>
-                </div>
-     </div>
-
-     <script src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

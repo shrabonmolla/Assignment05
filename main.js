@@ -16,7 +16,8 @@ document
   .getElementById("card-container")
   .addEventListener("click", function (e) {
     if (e.target.tagName == "BUTTON") {
-      button = e.target;
+      const button = e.target;
+       if (!button.innerText.includes("Call")) return;
       serviceName =
         button.parentNode.parentNode.children[1].children[0].innerText;
       serviceNumber =
@@ -30,5 +31,55 @@ document
       alert(`${serviceName} ${serviceNumber} is calling`);
       coin -= 20;
       displaycoin.innerText = coin;
+
+      const now = new Date().toLocaleTimeString()
+      const div = document.createElement("div")
+      div.innerHTML = `
+                    <div
+              class="flex justify-between items-center bg-gray-100 p-4 mt-2 rounded text-xs"
+            >
+              <div>
+                <h1 class="font-bold">${serviceName}</h1>
+                <p>${serviceNumber}</p>
+              </div>
+              <div>${now}</div>
+            </div>
+
+      
+      `
+      document.getElementById("historyContainer").append(div)
+
     }
   });
+
+
+
+
+
+
+
+
+// clear button 
+  document
+          .getElementById("clearbtn")
+          .addEventListener("click",function(e){
+            document.getElementById("historyContainer").innerHTML=""
+          })
+
+
+
+//copy button 
+copycount = 2 
+copydisplay = document.getElementById('copy-btn')
+document.getElementById("card-container").addEventListener("click", function (e) {
+  if (e.target.tagName == "BUTTON" && e.target.innerText.includes("Copy")) {
+    const button = e.target.closest("button");
+    const serviceNumber =
+      button.parentNode.parentNode.children[2].children[0].innerText;
+    navigator.clipboard.writeText(serviceNumber);
+
+    copycount++
+    copydisplay.innerHTML=`${copycount} copy`
+    
+  }
+});
