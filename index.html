@@ -24,7 +24,7 @@
 
       <div class="flex gap-5">
         <div class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl">
-          <span>0</span>
+          <span id="heartdisplay">0</span>
           <img class="h-5 w-5 m-2" src="./assets/heart.png" alt="heart" />
         </div>
         <div class="flex items-center btn btn-active bg-green-100 border-none rounded-3xl">
@@ -51,7 +51,9 @@
 
 
     <!-- cards section  -->
-     <div class="cards-container grid grid-cols-12 gap-3 p-4 bg-green-100  ">
+     <div 
+     id="card-container"
+     class="cards-container grid grid-cols-12 gap-3 p-4 bg-green-100  ">
               <!-- all cards -->
                <div class="grid grid-cols-3 col-span-9 gap-5 ">
                         <!-- card -->
@@ -317,5 +319,7 @@
                   </div>
                 </div>
      </div>
+
+     <script src="main.js"></script>
   </body>
 </html>
